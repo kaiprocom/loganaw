@@ -2,3 +2,91 @@
 	
 
   Hey contact us at the following email address 
+  
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+      <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+      <title>Contact us</title>
+      <link rel="STYLESHEET" type="text/css" href="contact.css" />
+      <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
+</head>
+<body>
+
+<!-- Form Code Start -->
+<form id='contactus' action='/files/contact-form/simple-captcha-1/contactform.php' method='post' accept-charset='UTF-8'>
+<fieldset >
+<legend>Contact us</legend>
+
+<input type='hidden' name='submitted' id='submitted' value='1'/>
+<input type='hidden' name='id44197637ac794ffea339' value='4a78de69a0f58473e79e18bf08fb0b8f'/>
+<input type='text'  class='spmhidip' name='spd905b24db2b0b6fc91d3c3d6d134889d' />
+
+<div class='short_explanation'>* required fields</div>
+
+<div><span class='error'></span></div>
+<div class='container'>
+    <label for='name' >Your Full Name*: </label><br/>
+    <input type='text' name='name' id='name' value='' maxlength="50" /><br/>
+    <span id='contactus_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='email' >Email Address*:</label><br/>
+    <input type='text' name='email' id='email' value='' maxlength="50" /><br/>
+    <span id='contactus_email_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='phone' >Phone Number:</label><br/>
+    <input type='text' name='phone' id='phone' value='' maxlength="15" /><br/>
+    <span id='contactus_phone_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='message' >Message:</label><br/>
+    <span id='contactus_message_errorloc' class='error'></span>
+    <textarea rows="10" cols="50" name='message' id='message'></textarea>
+</div>
+<fieldset id='antispam'>
+<legend >Anti-spam question</legend>
+<span class='short_explanation'>(Please answer the simple question below. This to prevent spam bots from submitting this form)</span>
+<div class='container'>
+    <label for='scaptcha' >Are you a robot? </label>
+    <input type='text' name='scaptcha' id='scaptcha' maxlength="10" /><br/>
+    <span id='contactus_scaptcha_errorloc' class='error'></span>
+</div>
+</fieldset>
+
+<div class='container'>
+    <input type='submit' name='Submit' value='Submit' />
+</div>
+
+</fieldset>
+</form>
+<!-- client-side Form Validations:
+Uses the excellent form validation script from JavaScript-coder.com-->
+
+<script type='text/javascript'>
+// <![CDATA[
+
+    var frmvalidator  = new Validator("contactus");
+    frmvalidator.EnableOnPageErrorDisplay();
+    frmvalidator.EnableMsgsTogether();
+    frmvalidator.addValidation("name","req","Please provide your name");
+
+    frmvalidator.addValidation("email","req","Please provide your email address");
+
+    frmvalidator.addValidation("email","email","Please provide a valid email address");
+
+    frmvalidator.addValidation("message","maxlen=2048","The message is too long!(more than 2KB!)");
+
+
+    frmvalidator.addValidation("scaptcha","req","Please answer the anti-spam question");
+
+
+
+
+
+// ]]>
+</script>
+
+
+</body>
+</html>
