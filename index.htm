@@ -231,6 +231,10 @@ var as = document.getElementById("videos").getElementsByTagName('a');
 
 for(var i=0;i<as.length;i++){
 	var a = as[i];
+	a.onclick = function(){
+	  $("#i")[0].src = this.href;
+	  return false;
+	};
 	
 	if(a.href.indexOf(/player.vimeo.com/) != -1)(function(a){
 		var id = a.href.match(/http:\/\/player.vimeo.com\/video\/(.*)/)[1];
